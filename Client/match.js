@@ -1,0 +1,1 @@
+// Hvis du swiper ja, så skal den loop igennem og vise næste person
