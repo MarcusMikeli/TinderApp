@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinderApp</title>
     <link rel="stylesheet" href="frontpage.css">
+    <script src="frontpage.js"></script>
 </head>
 <body>
     <form action="action_page.php" method="post">
@@ -21,10 +22,27 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <button id="submitbtn" type="submit">Login</button> <br>
+            <button id="redirect">Create account</button>
+            
+
+            <script type="text/javascript">
+                document.getElementById("redirect").onclick = function() {
+                    location.href = "../createAcc/createacc.html";
+            };
+            /* DET NEDENSTÅENDE SKAL FIXES SÅ MAN KUN BLIVER HENVIST TIL DEN SIDE HVIS LOGIN ER TRUE
+                if (login === true) {
+                document.getElementById("submitbtn").onclick = function() {
+                    location.href = "../mainUser/user.html"
+                } else {
+                    return 'login failed'
+                } 
+            }; */
+            </script>
+
         </div>
     </form>
 
-    <a id="createacc" href="../createAcc/createacc.html">Create account</a>
+    
 </body>
 </html>
